@@ -20,7 +20,8 @@ export default class App extends Component {
     super();
     this.state = {
 
-      images: []
+      images: [],
+      searchText: ''
     }
   } 
 
@@ -64,9 +65,11 @@ export default class App extends Component {
 
 
       <Switch>
-        <Route exact path="/" Component={Gallery} />}
-      <Route exact path="/:name" Component={Gallery}/>
-     </Switch>
+      <Route path="/:name" render={() => this.performSearch(this.state.searchText)} />
+      <Route path="/Cats" render={() => this.performSearch('cats')} />
+      <Route path="/Dogs" render={() => this.performSearch('dog')}  />
+      <Route path="/Computers" render={() => this.performSearch('computers')}/>
+      </Switch>
       
           
       </BrowserRouter>
