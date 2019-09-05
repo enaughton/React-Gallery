@@ -23,6 +23,7 @@ export default class App extends Component {
             <h1 className="main-title">FLICKR API SEARCH</h1>
             <SearchForm />
             <Nav />
+            <h2>Results</h2>
           </div>
 
           <div className="photo-container">
