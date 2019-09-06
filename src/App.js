@@ -6,16 +6,7 @@ import Gallery from "./Components/Gallery";
 import Nav from "./Components/Nav";
 
 export default class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      images: [],
-      searchText: ""
-    };
-  }
-
   render() {
-    console.log(this.state.images);
     return (
       <BrowserRouter>
         <div className="container">
@@ -23,7 +14,6 @@ export default class App extends Component {
             <h1 className="main-title">FLICKR API SEARCH</h1>
             <SearchForm />
             <Nav />
-            <h2>Results</h2>
           </div>
 
           <div className="photo-container">
